@@ -24,8 +24,8 @@
 		const id = getRandomInt(1, 1000);
 
 		// Create a WebSocket connection to the server
-		const socket = new WebSocket('ws://192.168.43.9:8080/ws/'+room_id);
-		console.log('ws://192.168.43.9:8080/ws/'+id)
+		const socket = new WebSocket('ws://192.168.43.9:8000/ws/'+room_id);
+		console.log('ws://192.168.43.9:8000/ws/'+id)
 
 		// Function to display messages on the web page
 		function showMessage(message) {
