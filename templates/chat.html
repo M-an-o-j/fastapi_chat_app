@@ -10,6 +10,7 @@
 <body>
 	<h1>WebSocket Example</h1>
 	<input type="text" id="inputText" placeholder="Type something...">
+	<input type="text" id="receiver_name" placeholder="Type something...">
 	<button id="submitButton">Submit</button>
 	<div id="container"></div>
 
@@ -51,10 +52,13 @@
 		});
 
 		const inputText = document.getElementById("inputText");
+		const receiver_name = document.getElementById("receiver_name");
 		const submitButton = document.getElementById("submitButton");
 
 		submitButton.addEventListener("click", function () {
+			const receiver = receiver_name.value;
 			const inputValue = inputText.value;
+			socket.send(receiver)
 			socket.send(inputValue)
 		});
 
